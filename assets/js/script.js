@@ -64,8 +64,8 @@ for (let i = 0; i < photosItem.length; i++) {
 
     modalImg.src = this.querySelector("[data-photos-avatar]").src;
     modalImg.alt = this.querySelector("[data-photos-avatar]").alt;
-    //modalTitle.innerHTML = this.querySelector("[data-photos-title]").innerHTML;
-    //modalTime.innerHTML = this.querySelector("[data-photos-time]").innerHTML;
+    modalTitle.innerHTML = this.querySelector("[data-photos-title]").innerHTML;
+    modalTime.innerHTML = this.querySelector("[data-photos-time]").innerHTML;
     var data = this.querySelector("[data-photos-metadata]").innerHTML;  //yeah, album, num, ext
     addAllPhotos(data);
     photosModalFunc();
