@@ -16,8 +16,8 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// photos variables
+const photosItem = document.querySelectorAll("[data-photos-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -25,33 +25,58 @@ const overlay = document.querySelector("[data-overlay]");
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
+const modalTime = document.querySelector("[data-modal-time]");
 
 // modal toggle function
-const testimonialsModalFunc = function () {
+const photosModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
+function addAllPhotos(data) {
+  //var fs = require('fs');
+  var path = "./assets/images/photography/";
+  const dataArr = data.split(","); // yeah, album, num, ext
+  var year = dataArr[0];
+  var album = dataArr[1];
+  var num = Number(dataArr[2]);
+  var ext = dataArr[3];
+  
+  var item;
+  var items = [];
+  for(let i = 1; i <= num; i++) {
+    // <figure class="photo-album-popup">
+    //<img src="./assets/images/photography/2016/shadows/shadow-1.jpg" alt="window shadow" width=200>
+    //</figure>
+    item = '<figure class="photo-album-popup">' +
+      '<img src="' + path + year + '/' + album + '/' + album + '-' + i.toString() + '.' + ext + '" alt="window shadow" width=200>' + 
+      //'<img src="' + path + i + ext + '"></figure></div>' + 
+      '</figure>';
+    items.push(item);
+  }
+  $('.modal-img-wrapper').empty().append(items.join('\n'));
+}
+
 // add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+for (let i = 0; i < photosItem.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+  photosItem[i].addEventListener("click", function () {
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
+    modalImg.src = this.querySelector("[data-photos-avatar]").src;
+    modalImg.alt = this.querySelector("[data-photos-avatar]").alt;
+    //modalTitle.innerHTML = this.querySelector("[data-photos-title]").innerHTML;
+    //modalTime.innerHTML = this.querySelector("[data-photos-time]").innerHTML;
+    var data = this.querySelector("[data-photos-metadata]").innerHTML;  //yeah, album, num, ext
+    addAllPhotos(data);
+    photosModalFunc();
 
   });
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+modalCloseBtn.addEventListener("click", photosModalFunc);
+overlay.addEventListener("click", photosModalFunc);
 
 
 
@@ -139,8 +164,6 @@ for (let i = 0; i < formInputs.length; i++) {
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
-console.log(navigationLinks);
-console.log(pages);
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
