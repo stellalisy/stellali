@@ -1207,7 +1207,17 @@ main {
   padding-bottom: 10px;
 }
 
+.venue {
+  color: var(--vegas-gold);
+  padding-bottom: 10px;
+}
 
+.red {
+  color:#ed2323;
+  background: none;
+  font-weight: bold;
+  display: inline;
+}
 
 
 
