@@ -1210,6 +1210,7 @@ main {
 .venue {
   color: var(--vegas-gold);
   padding-bottom: 10px;
+  font-weight: bold;
 }
 
 .red {
