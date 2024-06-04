@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MediQ: Question-Asking LLMs for
+    Adaptive and Reliable Clinical Reasoninge</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><i><img src="static/images/expert_model.png" alt="Expert Model Icon" style="width:7%"></i>MediQ: Question-Asking LLMs for
+              Adaptive and Reliable Clinical Reasoning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://stellalisy.com/" target="_blank">Shuyue Stella Li</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://vidhishanair.github.io/" target="_blank">Vidhisha Balachandran</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="https://bunsenfeng.github.io/" target="_blank">Shangbin Feng</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://em.uw.edu/people/faculty/jonathan-illgen" target="_blank">Jonathan Ilgen</a><sup>2</sup>,</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+                  
+              <span class="author-block">
+                    <a href="https://www.cs.cornell.edu/~emmapierson/" target="_blank">Emma Pierson</a><sup>4</sup>,</span>
+              <span class="author-block">
+                    <a href="https://koh.pw/" target="_blank">Pang Wei Koh</a><sup>1,5</sup>,</span>
+              <span class="author-block">
+                      <a href="https://homes.cs.washington.edu/~yuliats/" target="_blank">Yulia Tsvetkov</a><sup>1</sup></span>
+            </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Department of Computer Science, University of Washington</span><br>
+                    <span class="author-block"><sup>2</sup>Department of Medicine, University of Washington</span><br>
+                    <span class="author-block"><sup>3</sup>Carnegie Mellon University</span>
+                    <span class="author-block"><sup>4</sup>Cornell Tech</span>
+                    <span class="author-block"><sup>5</sup>Allen Institute for AI</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+                      <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2406.00922" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="ai ai-arxiv"></i>
+                          </span>
+                          <span>Paper</span>
+                        </a>
+                      </span>
+
+                      <!-- Supplementary PDF link -->
+                      <span class="link-block">
+                        <a href="https://github.com/stellali7/mediQ/tree/main/data" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fas fa-database"></i>
+                          </span>
+                          <span>Data</span>
+                        </a>
+                      </span>
+
+                      <!-- Github link -->
+                      <span class="link-block">
+                        <a href="https://github.com/stellali7/MediQ" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fab fa-github"></i>
+                          </span>
+                          <span>Code</span>
+                        </a>
+                      </span>
+
+                      <!-- Slides link -->
+                      <span class="link-block">
+                        <a href="https://docs.google.com/presentation/d/1EZv_gxH8hl-ECv4d2mn62DGeqfgTst9Y95TidBnJB-0/edit?usp=sharing" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fab fa-google-drive"></i>
+                          </span>
+                          <span>Slides</span>
+                        </a>
+                      </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper TLDR -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TLDR</h2>
+        <div class="content has-text-justified">
+          <p>
+            When the LLM is unsure, how do we make it <span style="background-color: #e2c5ff"> ask follow-up questions to gather more information? </span> We introduce MEDIQ, a framework for simulating realistic clinical interactions, where an Expert model asks information-seeking questions when needed and respond reliably. We show that adapting LLMs to interactive information-seeking settings is nontrivial, and propose an <span style="background-color: #f8e69d"> abstention module to <b>better estimate model confidence</b> and <b>ask better questions</b></span> . MEDIQ improves diagnostic accuracy by 20.3%, but performance still lags compared to an upper bound when full information is given upfront. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper TLDR -->
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/mediq_video.mov"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        An example MediQ interaction, where the Expert system is expected to elicit information from the patient until it is confident in its diagnosis. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In high-stakes domains like clinical reasoning, AI assistants powered by large language models (LLMs) are yet to be reliable and safe. We identify a key obstacle towards reliability: existing LLMs are trained to answer any question, even with incomplete context in the prompt or insufficient parametric knowledge. We propose to change this paradigm to develop more careful LLMs that ask follow-up questions to gather necessary and sufficient information and respond reliably. We introduce MEDIQ, a framework to simulate realistic clinical interactions, which incorporates a Patient System and an adaptive Expert System. The Patient may provide incomplete information in the beginning; the Expert refrains from making diagnostic decisions when unconfident, and instead elicits missing details from the Patient via follow-up questions. To evaluate MEDIQ, we convert MedQA and Craft-MD---medical benchmarks for diagnostic question answering---into an interactive setup. We develop a reliable Patient system and prototype several Expert systems, first showing that directly prompting state-of-the-art LLMs to ask questions degrades the quality of clinical reasoning, indicating that adapting LLMs to interactive information-seeking settings is nontrivial. We then augment the Expert with a novel abstention module to better estimate model confidence and decide whether to ask more questions, thereby improving diagnostic accuracy by 20.3%; however, performance still lags compared to an (unrealistic in practice) upper bound when full information is given upfront. Further analyses reveal that interactive performance can be improved by filtering irrelevant contexts and reformatting conversations. Overall, our paper introduces a novel problem towards LLM reliability, a novel MEDIQ framework, and highlights important future directions to extend the information-seeking abilities of LLM assistants in critical domains.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/framework.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          The MEDIQ framework for simulating realistic clinical interactions.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/task.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Comparison among the standard <i>single-turn</i> medical question-answering task, where all necessary information is provided upfront (left), the general LLM response not specialized to the patient's situation (middle), and the <i>interactive</i> MEDIQ task, where the Expert asks follow-up questions to gather necessary information.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/expert_wide.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Explicit reasoning steps of the Expert System in MEDIQ, which includes an abstention module to decide whether to ask more questions.
+       </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- table 1 results -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">How do existing LLMs perform with Limited Information?</h2>
+      <div class="columns is-centered">
+        
+        <!-- Left column for the image -->
+        <div class="column is-7">
+          <figure>
+            <img src="static/images/table_1_bar.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <figcaption style="margin-right:20px;">Accuracy in non-intereactive setups with decreasing amount of available information (left of dashed line) and accuracy of the baseline (BASIC) and the improved (BEST) interactive setup (right of dashed line).</figcaption>
+          </figure>
+          
+        </div>
+        
+        <!-- Right column for text description -->
+        <div class="column is-5 is-flex is-align-items-center is-justify-content-center" style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="content">
+            <p>First, we reduce the amount of information presented to the Expert system too show that <span style="background-color: #f8f7a6"> end-task accuracy is correlated with the amount of information available </span> (as shown in the Non-Interactive Setups to the left of dotted vertical separator line). </p>
+            <p>Then, we provide the Initial information to the expert system give it the option to ask follow-up questions in an interactive manner (BASIC-Interactive). The model's performance <i>drops</i> from when given the same Initial information in the non-interactive setup (Initial Non-Interactive). This indicates that <span style="background-color: #f8f7a6">adapting LLMs to interactive information-seeking settings is nontrivial.</span></p>
+            <p>Finally, we show that our BEST setup, which incorporates <span style="background-color: #f8f7a6">explicit clinical reasoning and more accurate confidence estimation, </span> effectively seeks additional information and improves performance.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End table 1 -->
+
+
+
+
+<!-- Results part 2 -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Why does the BASIC interactive setup fail to perform clinical reasoning?</h2>
+      <div class="columns is-centered">
+          
+          <!-- Left column for the image -->
+        <div class="column is-6">
+          <img src="static/images/num_questions_asked_nollama2.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+        </div>
+        
+        <div class="column is-1"></div>
+
+        <!-- Right column for text description -->
+        <div class="column is-5 is-flex is-align-items-center is-justify-content-center" style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="content">
+            <p>Is the BASIC interactive Expert system actually acquiring additional information? We looked into the question-asking behavior of the models and observed that <span style="background-color: #f8f7a6">LLMs almost never ask questions</span> even when given the option. Instead, they tend to choose to answer the inquiry with incomplete information, which often lead to incorrect answers. So we hypothesize that the inability to ask questions lead to the poor performance, and in the following sections, we try to improve (1) the model's <b> tendency to ask questions </b> and (2) the <b> quality of the questions.</b></p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End results part 2 -->
+
+
+<!-- Results part 2 -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Conversational Format and Irrelevant Information Distract the Expert System</h2>
+      <div class="columns is-centered">
+          
+        <div class="column is-1"></div>
+        
+          <!-- Left column for the image -->
+        <div class="column is-5">
+          <img src="static/images/baseline_accuracy_analysis.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+        </div>
+
+        <div class="column is-1"></div>
+        
+        <!-- Right column for text description -->
+        <div class="column is-5 is-flex is-align-items-center is-justify-content-center" style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="content">
+            <p>Why did the performance drop so much with the BASIC baseline interactive setting? There is a striking 11.3% relative drop in accuracy compared to its <i>non-interactive</i> counterpart with the same <i>Initial</i> information (NI-Initial) across all benchmarked LLMs (7.43% for GPT-3.5 on iMedQA). We show that the <span style="background-color: #fbc8d0">irrelevant information</span> and the <span style="background-color: #fbc8d0">conversation format</span> of the information both contribute to the poor performance. When we remove irrelevant information---the questions that are not answerable using the patient record---and/or keeping only unique information by removing repeated questions (that are usually unanswerable as well), the accuracy increases as shown in the blue bars. As we convert the conversation log format into a paragraph format, accuracy further increases as shown in the orange bars, showing that it's easier for models to integrate information in a paragraph format. </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End results part 2 -->
+
+
+<!-- Results part 2 -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Specialized Reasoning Modules Improve Expert System Performance</h2>
+      <div class="columns is-centered">
+          
+          <!-- Left column for the image -->
+        <div class="column is-7">
+          <img src="static/images/main.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+        </div>
+        
+        <!-- Right column for text description -->
+        <div class="column is-5 is-flex is-align-items-center is-justify-content-center" style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="content">
+            <p>We improve the Expert system by <span style="background-color: #e2c5ff">having a dedicated abstention module</span>. The dedicated abstention module produces an abstention decision first, then use separate question generation module and decision making modules to allow for more specialized instructions and simpler decisions at each step. We experimented with different confidence estimation formats by prompting the model to produce a numerical confidence score (<span style="background-color: rgba(255, 217, 0, 0.7)">Numerical</span>), a binary confident/unconfident decision (<span style="background-color: rgba(255, 160, 122, 0.7)">Binary</span>), and a scalar confidence level rating (<span style="background-color: rgba(135, 206, 250, 0.7)">Scale</span>). On top of this, we apply self-consistency (SC)---repeating the prompt multiple times and taking the average of outcomes---and rationale generation (RG)---generating an explanation to identify knowledge gaps---for the confidence judgment. We show that <span style="background-color: #f8f7a6">rationale generation always unilaterally improves performance, while self-consistency only helps <i>with</i> rationale generation.</span></p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End results part 2 -->
+
+
+
+<!-- Results part 2 -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">How much of the performance gap can be closed by asking questions?</h2>
+      
+      <div class="columns is-centered">
+        <div class="column is-flex is-align-items-center is-justify-content-center" style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="content">
+            <p>We decompose the clinical reasoning process of the Expert into deciding <span style="background-color: #b7e2f2"><i>when</i> to ask questions</span> and <span style="background-color: #d0f7c0"><i>what</i> questions to ask</span>, and show that both contribute to performance gains. When to ask questions is controled by the confidence estimation: we find that <span style="background-color: #b7e2f2">appropriate confidence threshold setting improves accuracy</span> (left) and <span style="background-color: #b7e2f2">rationale generation improves confidence estimation</span> (middle). Finaly, we show that <span style="background-color: #d0f7c0">rationale generation also helps identify knowledge gaps</span> and leads to better questions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <figure>
+            <img src="static/images/interpolated_extrapolated_plot_with_std.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <figcaption style="margin-left:0px; margin-right:2px">Accuracy over conversation lengths with independent abstention and quetion-generation modules averaged across abstention strategies with linear extrapolation. Increasing confidence threshold leads to more questions and higher accuracy. </figcaption>
+          </figure>
+        </div>
+        <div class="column is-4">
+          <figure>
+            <img src="static/images/conf_scores_all_thresholds.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <figcaption>Confidence scores with and without rationale generation (RG) averaged across Scale-based abstention strategies. RG leads to both lower initial confidence and lower estimated calibration error (ECE). </figcaption>
+          </figure>
+        </div>
+        <div class="column is-4">
+          <figure>
+            <img src="static/images/context_acc_scale.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <figcaption>Accuracy with and without rationale generation (RG) across Scale-based abstention strategies. The rationale generated often suggest knowledge gaps and guides question generator to produce more effective quetions.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <figure>
+            <img src="static/images/rg_knowledge_gap.jpg" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <figcaption style="margin-top:0;">Example of identified knowledge gap via rationale generation that leads to more relevant question generation.</figcaption>
+          </figure>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+<!-- End results part 2 -->
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{li2024mediq,
+      title={MEDIQ: Question-Asking LLMs for Adaptive and Reliable Clinical Reasoning}, 
+      author={Shuyue Stella Li and Vidhisha Balachandran and Shangbin Feng and Jonathan Ilgen and Emma Pierson and Pang Wei Koh and Yulia Tsvetkov},
+      year={2024},
+      eprint={2406.00922},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
