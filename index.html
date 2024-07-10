@@ -199,8 +199,8 @@
 
         <section class="about-text">
           <p>
-            I am a first-year Ph.D. student in Computer Science and Engineering at the University of Washington, advised by <a href="https://homes.cs.washington.edu/~yuliats/" class="a-inline" target="_blank">Yulia Tsvetkov</a>.
-            I do research in Natural Language Processing, and I'm particularly intereted in using computational methods to model and potentially discover cognitive processes.
+            I am a first-year Ph.D. student in the Allen School of Computer Science and Engineering at the University of Washington, advised by <a href="https://homes.cs.washington.edu/~yuliats/" class="a-inline" target="_blank">Yulia Tsvetkov</a>.
+            I do research in Natural Language Processing, and I'm particularly interested in using computational methods to model and potentially discover cognitive processes.
           </p>
           <p>
             Before grad school, I received my B.S. and M.S.E. at Johns Hopkins with majors in Computer Science, Cognitive Science (linguistics focus), and Applied Mathematics (statistics focus).
@@ -209,7 +209,7 @@
           </p>
 
           <p><b>My research interests: </b>
-            Natural Language Processing, Multilingual NLP, Computational Sociolinguistics, Low-Resource Machine Translation, Human-Centered NLP
+            Natural Language Processing, Multilingual NLP, Clinical Reasoning, Social Reasoning, Human-Centered NLP
           </p>
             
           <p>
@@ -240,7 +240,7 @@
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Interactive Medical Reasoning</h4>
                 <p class="service-item-text">
-                  I'm thinking about how to identify missing information during medical decision making and proactively seek information using large language models. Also interested in modeling "intuition" in expert domains.
+                  I'm thinking about how to identify and proactively seek information using LLMs to improve diagnostic accuracy <i>with statistical guarantee</i>. How to make LLMs ask good questions? How do we model "intuition" in expert domains?
                 </p>
               </div>
             </li>
@@ -250,9 +250,9 @@
                 <img src="./assets/images/icon-community.png" alt="design icon" width="40">
               </div>
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Surfacing Community Norms</h4>
+                <h4 class="h4 service-item-title">Community Norms & Values</h4>
                 <p class="service-item-text">
-                  How do people in different communities interact differently? What are the unspoken rules that influence and govern such interactions? This project attempts to surface linguistic and social norms in online communities.
+                  How do people in different social groups interact differently? How do unspoken rules shape behaviors and interactions? This project aims to surface linguistic and social norms in online communities and reflect the discovered norms in LLM agents.
                 </p>
               </div>
             </li>
@@ -330,6 +330,20 @@
             <h3 class="h3">News</h3>
           </div>
           <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">07/02/2024</h4>
+              <p class="timeline-text">
+                Check out our new paper "<a href="https://arxiv.org/abs/2407.02472" class="a-inline" target="_blank">ValueScope: Unveiling Implicit Norms and Values via Return Potential Model of Social Interactions</a> to see how we "read the room" using LLMs.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">06/03/2024</h4>
+              <p class="timeline-text">
+                Check out our new paper "<a href="./projects/mediQ/index.html" class="a-inline" target="_blank">MEDIQ: Question-Asking LLMs for Adaptive and Reliable Clinical Reasoning</a> in which we teach LLMs to ask--instead of answer--clinical questions!
+              </p>
+            </li>
 
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">12/06/2023</h4>
@@ -602,12 +616,38 @@
 
           <ul class="blog-posts-list">
 
+            <li class="blog-post-item">
+              <a href="https://arxiv.org/abs/2407.02472" target="_blank">
+                <div class="columns is-centered is-5">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/images/project-valuescope.jpg" alt="ValueScope: social norms and values detector" loading="lazy">
+                  </figure>
+                </div>
+                <div class="columns is-centered is-5">
+                  <div class="blog-content">
+                    <!-- <div class="blog-meta">
+                      <p class="blog-category">Social Computing</p>
+                      <span class="dot"></span>
+                      <time datetime="2023-10-01">Oct 23 - June 24</time>
+                    </div> -->
+                    <h3 class="h3 blog-item-title">ValueScope: Implicit Social Norms & Values</h3>
+                    <p class="blog-text venue">Preprint</p>
+                    <p class="blog-text authors">
+                      Chan Young Park*, <b>Shuyue Stella Li*</b>, Hayoung Jung*, Svitlana Volkova, Tanushree Mitra, David Jurgens, Yulia Tsvetkov
+                    </p>
+                    <p class="blog-text">
+                      We developed a computational framework to model and discover implicit social norms and values in online communities at scale.
+                    </p>
+                  </div>
+              </div>
+              </a>
+            </li>
 
             <li class="blog-post-item">
               <a href="./projects/mediQ/index.html" target="_blank">
                 <div class="columns is-centered is-5">
                   <figure class="blog-banner-box">
-                    <img src="./assets/images/project-mediq.jpg" alt="robust l2 translation" loading="lazy">
+                    <img src="./assets/images/project-mediq.jpg" alt="MediQ: interactive medical consultation framework" loading="lazy">
                   </figure>
                 </div>
                 <div class="columns is-centered is-5">
