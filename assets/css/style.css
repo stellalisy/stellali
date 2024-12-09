@@ -846,6 +846,28 @@ main {
   line-height: 1.6;
 }
 
+/* Default to hide items after the 8th */
+.timeline-list .hidden {
+  display: none;
+}
+
+/* Show hidden items when expanded */
+.timeline-list.expanded .hidden {
+  display: list-item;
+}
+
+/* Style the button */
+.toggle-button {
+  margin-top: 10px;
+  margin-left: 65px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: var(--bittersweet-shimmer);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
 .a-inline {
   display: inline;
   color: var(--vegas-gold);
