@@ -163,7 +163,7 @@
         <h2 class="title is-3">TLDR</h2>
         <div class="content has-text-justified">
           <p>
-            When the LLM is unsure, how do we make it <span style="background-color: #e2c5ff"> ask follow-up questions to gather more information? </span> We introduce MEDIQ, a framework for simulating realistic clinical interactions, where an Expert model asks information-seeking questions when needed and respond reliably. We show that adapting LLMs to interactive information-seeking settings is nontrivial, and propose an <span style="background-color: #f8e69d"> abstention module to <b>better estimate model confidence</b> and <b>ask better questions</b></span> . MEDIQ improves diagnostic accuracy by 20.3%, but performance still lags compared to an upper bound when full information is given upfront. 
+            When the LLM is unsure, how do we make it <span style="background-color: #e6d2fa"> ask follow-up questions to gather more information? </span> We introduce MEDIQ, a framework for simulating realistic clinical interactions, where an Expert model asks information-seeking questions when needed and respond reliably. We show that adapting LLMs to interactive information-seeking settings is nontrivial, and propose an <span style="background-color: #f8e69d"> abstention module to <b>better estimate model confidence</b> and <b>ask better questions</b></span> . MEDIQ improves diagnostic accuracy by 20.3%, but performance still lags compared to an upper bound when full information is given upfront. 
           </p>
         </div>
       </div>
@@ -349,7 +349,7 @@
         <!-- Right column for text description -->
         <div class="column is-5 is-flex is-align-items-center is-justify-content-center" style="display: flex; flex-direction: column; justify-content: center;">
           <div class="content">
-            <p>We improve the Expert system by <span style="background-color: #e2c5ff">having a dedicated abstention module</span>. The dedicated abstention module produces an abstention decision first, then use separate question generation module and decision making modules to allow for more specialized instructions and simpler decisions at each step. We experimented with different confidence estimation formats by prompting the model to produce a numerical confidence score (<span style="background-color: rgba(255, 217, 0, 0.7)">Numerical</span>), a binary confident/unconfident decision (<span style="background-color: rgba(255, 160, 122, 0.7)">Binary</span>), and a scalar confidence level rating (<span style="background-color: rgba(135, 206, 250, 0.7)">Scale</span>). On top of this, we apply self-consistency (SC)---repeating the prompt multiple times and taking the average of outcomes---and rationale generation (RG)---generating an explanation to identify knowledge gaps---for the confidence judgment. We show that <span style="background-color: #f8f7a6">rationale generation always unilaterally improves performance, while self-consistency only helps <i>with</i> rationale generation.</span></p>
+            <p>We improve the Expert system by <span style="background-color: #e6d2fa">having a dedicated abstention module</span>. The dedicated abstention module produces an abstention decision first, then use separate question generation module and decision making modules to allow for more specialized instructions and simpler decisions at each step. We experimented with different confidence estimation formats by prompting the model to produce a numerical confidence score (<span style="background-color: rgba(255, 217, 0, 0.7)">Numerical</span>), a binary confident/unconfident decision (<span style="background-color: rgba(255, 160, 122, 0.7)">Binary</span>), and a scalar confidence level rating (<span style="background-color: rgba(135, 206, 250, 0.7)">Scale</span>). On top of this, we apply self-consistency (SC)---repeating the prompt multiple times and taking the average of outcomes---and rationale generation (RG)---generating an explanation to identify knowledge gaps---for the confidence judgment. We show that <span style="background-color: #f8f7a6">rationale generation always unilaterally improves performance, while self-consistency only helps <i>with</i> rationale generation.</span></p>
           </div>
         </div>
         
@@ -378,19 +378,19 @@
       <div class="columns is-centered">
         <div class="column is-4">
           <figure>
-            <img src="static/images/interpolated_extrapolated_plot_with_std.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <img src="static/images/interpolated_extrapolated_plot_with_std.png" alt="Ablation results on confidence thresholds." style="max-width:100%; height:auto;">
             <figcaption style="margin-left:0px; margin-right:2px">Accuracy over conversation lengths with independent abstention and quetion-generation modules averaged across abstention strategies with linear extrapolation. Increasing confidence threshold leads to more questions and higher accuracy. </figcaption>
           </figure>
         </div>
         <div class="column is-4">
           <figure>
-            <img src="static/images/conf_scores_all_thresholds.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <img src="static/images/conf_scores_all_thresholds.png" alt="Ablation results: rationale generation reduces calibration error." style="max-width:100%; height:auto;">
             <figcaption>Confidence scores with and without rationale generation (RG) averaged across Scale-based abstention strategies. RG leads to both lower initial confidence and lower estimated calibration error (ECE). </figcaption>
           </figure>
         </div>
         <div class="column is-4">
           <figure>
-            <img src="static/images/context_acc_scale.png" alt="Main results on non-interactive settings" style="max-width:100%; height:auto;">
+            <img src="static/images/context_acc_scale.png" alt="Ablation results: rationale improves performance through question generation" style="max-width:100%; height:auto;">
             <figcaption>Accuracy with and without rationale generation (RG) across Scale-based abstention strategies. The rationale generated often suggest knowledge gaps and guides question generator to produce more effective quetions.</figcaption>
           </figure>
         </div>
@@ -413,18 +413,66 @@
 <!-- End results part 2 -->
 
 
+<!-- Ablations -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">How do information-seeking behaviors differ across different patient records? </h2>
+
+      <div class="columns is-centered">
+        <div class="column is-flex is-align-items-center is-justify-content-center" style="display: flex; flex-direction: column; justify-content: center;">
+          <div class="content">
+            <p>
+              We parse the patient records by their medical specialties<sup><a href="#fn1" id="ref1">1</a></sup>, question types<sup><a href="#fn2" id="ref2">2</a></sup>, age, and gender groups. 
+              We find that when given limited initial information, <span style="background-color: #b7e2f2">proactive information-seeking benefits different groups differently.</span> 
+              This leads to the natural next step in the exploration of information-seeking LLM agents: <b>how do we design different information-seeking behaviors to adapt to different scenarios?</b> We leave this exciting question for future work.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <figure>
+            <img src="static/images/change_all_specialty.png" alt="Ablation results: interactive system helps/hinders different medical specialties differently." style="max-width:100%; height:auto;">
+            <figcaption style="margin-left:0px; margin-right:2px">Specialties like Ophthalmology and Neurosurgery benefit from information-seeking, but Family Medicine doesn't benefit as much. Questions testing for clinical experience (Step 2&3) benefit more from information seeking than questions on foundational science knowledge questions (Step 1).</figcaption>
+          </figure>
+        </div>
+        
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <figure>
+            <img src="static/images/change_demographics.png" alt="Ablation results: interactive system helps/hinders different medical specialties differently." style="max-width:100%; height:auto;">
+            <figcaption style="margin-left:0px; margin-right:2px">There is no significant trends on the effect of information-seeking on age and gender groups. However, <span style="background-color: #f8f7a6">it is important to note that</span> MedQA is retrieved from expert-written medical exams rather than real patient records, so the difficulty of the cases might be adjusted accordingly to balance age and gender groups. <span style="background-color: #f8f7a6">More rigorous experiments on more realistic patient distributions would be necessary for definitive conclusions.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <sup id="fn1">1. The list of medical specialties and their definitions are obtained from the <a href="https://www.abms.org/member-boards/specialty-subspecialty-certificates/" target="_blank">American Board of Medical Specialties</a>.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+      </p>
+
+      <p><sup id="fn2">2. There are 3 levels in the <a href="https://www.usmle.org/" target="_blank">United States Medical Licensing Examination (USMLE)</a>: Step 1 tests <b>foundational science knowledge</b>, Steps 2 and 3 evaluate <b>clinical experience</b> and the ability to practice medicine for patient care and management.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+      </p>
+      
+    </div>
+  </div>
+</section>
+<!-- End Ablations -->
+
+
 <!-- Paper poster -->
-<!-- <section class="hero is-small">
+<section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
+      <iframe  src="static/images/mediq_neurips_poster.pdf" width="100%" height="830"></iframe>
         
       </div>
     </div>
-  </section> -->
+  </section>
 <!--End paper poster -->
 
 
@@ -435,7 +483,8 @@
       <pre><code>@inproceedings{li2024mediq,
         title={MediQ: Question-Asking LLMs and a Benchmark for Reliable Interactive Clinical Reasoning},
         author={Li, Shuyue Stella and Balachandran, Vidhisha and Feng, Shangbin and Ilgen, Jonathan S and Pierson, Emma and Koh, Pang Wei and Tsvetkov, Yulia},
-        booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems}
+        journal={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+        year={2024}
       }</code></pre>
     </div>
 </section>
