@@ -1226,7 +1226,7 @@ main {
   height: 150px; /* Fixed height for the image box */
   border-radius: 12px;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 18px;
 }
 
 /* .blog-banner-box img {
