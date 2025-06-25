@@ -1157,7 +1157,7 @@ main {
   z-index: 1;
 } */
 
-.blog-post-item > a {
+.blog-post-item > .blog-post-container {
   display: flex; /* Flexbox layout to position the image and text side by side */
   background: var(--border-gradient-onyx);
   width: 100%;
@@ -1242,7 +1242,7 @@ main {
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+.blog-post-item .blog-banner-box:hover img { transform: scale(1.1); }
 
 /* .blog-content { padding: 15px; } */
 
@@ -1283,7 +1283,7 @@ main {
   transition: var(--transition-1);
 }
 
-.blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+.blog-post-item .blog-item-title:hover { color: var(--orange-yellow-crayola); }
 
 .blog-text {
   color: var(--light-gray);
@@ -1294,6 +1294,12 @@ main {
 
 .authors {
   padding-bottom: 10px;
+}
+
+/* Make bold text more prominent in author names */
+.authors b {
+  font-weight: 900; /* Extra bold weight */
+  color: var(--white-1); /* Brighter color for contrast */
 }
 
 .venue {
@@ -1441,7 +1447,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
   /* .blog-banner-box { height: auto; } */
 
-  .blog-post-item > a {
+  .blog-post-item > .blog-post-container {
     flex-direction: column; /* Stack image above text */
     align-items: center; /* Center content horizontally */
     padding: 10px; /* Add some padding for spacing */
@@ -1768,7 +1774,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 20px; /* Slightly larger gap for breathing room */
   }
 
-  .blog-post-item > a {
+  .blog-post-item > .blog-post-container {
     flex-direction: column; /* Keep image above text */
     align-items: flex-start; /* Ensure text remains left-aligned */
     padding: 15px; /* Add more padding for a cleaner layout */
@@ -1905,7 +1911,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 24px; /* Increase spacing between posts */
   }
 
-  .blog-post-item > a {
+  .blog-post-item > .blog-post-container {
     flex-direction: row; /* Place image and text side by side */
     align-items: flex-start; /* Align items to the top */
     padding: 20px; /* Add padding for spacing */
