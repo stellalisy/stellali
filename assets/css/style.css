@@ -48,7 +48,7 @@
   --text-gradient-yellow: linear-gradient(
     to right, 
     hsl(297, 85%, 81%), 
-    hsl(320, 96%, 72s%)
+    hsl(320, 96%, 72%)
   );
 
   /* solid */
@@ -128,7 +128,7 @@ a {
 
 li { list-style: none; }
 
-img, ion-icon, a, button, time, span { display: block; }
+img, ion-icon, a, button, time { display: block; }
 
 button {
   font: inherit;
@@ -813,6 +813,7 @@ main {
 }
 
 .timeline-list span {
+  display: block;
   color: var(--vegas-gold);
   font-weight: var(--fw-400);
   line-height: 1.6;
@@ -1271,6 +1272,7 @@ main {
 
 
 .blog-meta .dot {
+  display: block;
   background: var(--light-gray-70);
   width: 4px;
   height: 4px;
