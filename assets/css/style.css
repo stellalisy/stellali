@@ -45,6 +45,11 @@
     hsl(0, 0%, 25%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    hsl(268.54deg 85% 81%),
+    hsl(226.64deg 96% 72%)
+  );
 
   /* solid */
 
@@ -245,6 +250,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
+  background: var(--text-gradient-yellow);
   border-radius: 3px;
 }
 
@@ -829,6 +835,7 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
+  background: var(--text-gradient-yellow);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -900,6 +907,7 @@ main {
 }
 
 .skill-progress-fill {
+  background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;
 }
